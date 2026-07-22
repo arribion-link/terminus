@@ -8,11 +8,9 @@ if [ "$PWD" = "/" ]; then
     exit 0
 fi
 
-mkdir -p /logs/verifier
+# mkdir -p /logs/verifier 
 
-# Start the gateway if it isn't already up (agents may have started it
-# themselves while working; either way we make sure it's running before
-# grading).
+# Start the gateway if it isn't already up
 if ! curl -s -o /dev/null http://127.0.0.1:8080/healthz; then
     nohup python3 /app/gateway/app.py > /tmp/gateway.log 2>&1 &
     for _ in $(seq 1 30); do
@@ -22,6 +20,9 @@ if ! curl -s -o /dev/null http://127.0.0.1:8080/healthz; then
         sleep 0.5
     done
 fi
+
+# --- ADD THIS LINE ---
+rm -rf /logs/verifier
 
 # pytest, pytest-json-ctrf, and requests are pre-installed in the image.
 python -m pytest --ctrf /logs/verifier/ctrf.json /tests/test_outputs.py -rA
