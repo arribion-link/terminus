@@ -1,0 +1,16 @@
+{
+  "patient_id": "P001",
+  "visit_history": [
+    {"timestamp": "2025-01-15T10:00:00", "duration": 120, "platform": "web"},
+    {"timestamp": "2025-01-16T14:30:00", "duration": 85, "platform": "mobile"}
+  ],
+  "device_history": [
+    {"os": "iOS", "screen": "375x812", "battery": 0.85, "network": "wifi"},
+    {"os": "Android", "screen": "1080x2400", "battery": 0.62, "network": "cellular"}
+  ],
+  "event_history": [
+    {"type": "click", "timestamp": "2025-01-15T10:01:00"},
+    {"type": "scroll", "timestamp": "2025-01-15T10:02:00"},
+    {"type": "error", "timestamp": "2025-01-16T14:31:00"}
+  ]
+}

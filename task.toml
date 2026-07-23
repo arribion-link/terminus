@@ -1,0 +1,43 @@
+# Task configuration schema version
+version = "2.0"
+
+[metadata]
+author_name = "anonymous"
+author_email = "anonymous"
+# NOTE: this is the intended difficulty target based on task design. It must
+# be confirmed (and corrected if needed) by running `stb harbor run -m
+# @openai/gpt-5.5` and `-m @anthropic/claude-opus-4-8` per the Testing Agent
+# Performance guide before submission -- see README.md.
+difficulty = "hard"
+category = "machine-learning"
+# Options for subcategories: "long_context", "tool_specific", "api_integration", "db_interaction", "ui_building"
+subcategories = ["api_integration"]
+
+# Number of milestones in the task (0 if not a milestone task)
+number_of_milestones = 0
+
+# Size of the codebase: minimal -> 0-20 files, small -> 20+ files, large -> 200+ files.
+codebase_size = "minimal"
+
+# Coding language(s) used in the oracle solution or required by the agent
+languages = ["perl", "python"]
+
+# 3-6 free-form keywords for tools/libraries relevant to the task
+tags = ["perl", "flask", "git", "polars", "logistic-regression", "supply-chain-integrity"]
+
+# Estimated time to complete (minutes)
+expert_time_estimate_min = 90
+junior_time_estimate_min = 180
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+allow_internet = false
