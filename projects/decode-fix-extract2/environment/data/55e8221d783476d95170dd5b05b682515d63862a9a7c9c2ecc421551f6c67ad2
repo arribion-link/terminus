@@ -1,0 +1,2 @@
+Phase epsilon initialised
+EXEC: sha256sum /app/data/message.txt | cut -d' ' -f1 | cut -c1-16

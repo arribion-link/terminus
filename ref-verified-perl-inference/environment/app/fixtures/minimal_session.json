@@ -1,7 +1,0 @@
-{
-  "session_id": "example-002",
-  "patient": { "age": 22, "sex": "M" },
-  "visits": [],
-  "devices": [],
-  "events": []
-}
