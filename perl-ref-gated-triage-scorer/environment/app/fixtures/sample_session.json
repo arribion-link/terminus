@@ -1,0 +1,14 @@
+{
+  "patient_id": "p-demo",
+  "session_start": "2024-03-01T08:00:00Z",
+  "visits": [
+    {"visit_id": "v1", "ts": "2024-03-01T07:00:00Z", "heart_rate": 72, "spo2": 98, "bp_sys": 120, "bp_dia": 80},
+    {"visit_id": "v2", "ts": "2024-03-01T08:00:00Z", "heart_rate": 88, "spo2": 95, "bp_sys": 135, "bp_dia": 90}
+  ],
+  "devices": [
+    {"device_id": "d1", "name": "Omron M7", "first_seen": "2024-02-01T00:00:00Z", "last_seen": "2024-02-15T00:00:00Z"}
+  ],
+  "events": [
+    {"event_id": "e1", "ts": "2024-02-28T22:30:00Z", "type": "fall_detected", "severity": 3}
+  ]
+}
