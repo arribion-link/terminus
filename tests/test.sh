@@ -1,5 +1,4 @@
 # ... gateway startup code ...
-
 rm -rf /logs/verifier
 
 python -m pytest --ctrf /logs/verifier/ctrf.json /tests/test_outputs.py -rA
